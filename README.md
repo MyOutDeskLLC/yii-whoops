@@ -9,7 +9,7 @@ Usage
 1. Install it:
     - Using [Composer] (it will automatically install Whoops main libraries as well):
     ```shell
-    composer require tianye/yii-whoops ~1.0
+    composer require MyOutDeskLLC/yii-whoops ~1.0
     composer install
     ```
     - Or [downloading] and unpacking it in your `extensions` folder.
@@ -24,5 +24,5 @@ Usage
 3. Replace your `errorHandler` entry at `config/main.php` with the error handler class. Example:
 
     ```php
-    'errorHandler' => ['class' => 'vendor.tianye.yii-whoops.WhoopsErrorHandler']
+    'errorHandler' => ['class' => 'vendor.MyOutDeskLLC.yii-whoops.WhoopsErrorHandler']
     ```
