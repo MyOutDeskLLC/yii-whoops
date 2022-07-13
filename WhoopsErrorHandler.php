@@ -19,7 +19,7 @@ class WhoopsErrorHandler extends CErrorHandler
      *
      * @var string
      */
-    public $pageTitle = '错误调试';
+    public $pageTitle;
 
     /**
      * Instantiate Whoops with the correct handlers.
@@ -33,13 +33,6 @@ class WhoopsErrorHandler extends CErrorHandler
         } else {
             $page_handler = new PrettyPageHandler;
             $page_handler->setPageTitle($this->pageTitle);
-            $page_handler->addDataTable('BUG随时提醒你', [
-                '1.上线要关DEBUG.'       => '',
-                '2.上线之前要好好检查代码' => '',
-                '3.请注意编码的规范'      => '',
-                '4.请认真检测代码逻辑'    => '',
-                'Request information' => static::createRequestTable(),
-            ]);
             $this->whoops->pushHandler($page_handler);
         }
     }
